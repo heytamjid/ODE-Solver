@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+<h3></h3>
+    
+
+<form method="post" action="{% url 'submitODE' n %}">
+    {% csrf_token %}
+    
+    
+    
+
+    {% for i in order_list %}
+    <label id = "labelcss1" for="{{i}}">  <p>+</p></label>
+    <input id = "inputcss1" type="text" name="{{i}}">
+    D<sup>{{i}}</sup>
+    {% endfor %}
+
+    <label id = "labelcss1" style="display: inline-block;" for="y"><p>+</p></label>
+    <input id = "inputcss1" type="text" name="y">
+    <p id = "pcss1" >y</p>
+    
+    <label id = "labelcss1" style="display: inline-block;" for="constant"><p>=</p></label>
+    <input id = "inputcss1" type="text" name="constant">
+    
+    
+
+
+
+
+    
+    </br>
+    <input type="submit" value="Submit">
+</form>
+
+
+{% endblock %}

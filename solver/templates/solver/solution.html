@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block body %}
+
+<h5>Your Input ODE: </h5>
+<div id="equation">
+    $${{ input | safe }}$$
+</div>
+
+<h5>General Solution: </h5>
+<div id="equation">
+    $${{ gsoln | safe }}$$
+</div>
+
+{% endblock %}
