@@ -12,21 +12,42 @@
     
     
     <p>$$($$</p>
-    {% for i in order_list %}
+    {% for first, second in combined %}
     
-    <label id = "labelcss1" for="$${{i}}$$">  <p>+</p></label>
-    <input id = "inputcss1" type="text" name="{{i}}">
-    <p>$$D^{{i}}$$</p>
+    <label class = "labelold" for="$${{first}}$$">  <p>+</p></label>
+    <input class = "inputold" type="text" name="{{first}}">
+    <p>$$D^{ {{second}} }$$</p>
     {% endfor %}
 
     
-    <label id = "labelcss1" style="display: inline-block;" for="y"><p>+</p></label>
-    <input id = "inputcss1" type="text" name="y">
-    <p id = "pcss1" >$$ ) y$$</p>
+    <label class = "labelold" style="display: inline-block;" for="y"><p>+</p></label>
+    <input class = "inputold" type="text" name="y">
+    <p class = "pcss1" >$$ ) y$$</p>
     
     
-    <label id = "labelcss1" style="display: inline-block;" for="constant"><p>=</p></label>
-    <input id = "inputcss1" type="text" name="constant">
+    <label class = "labelold" style="display: inline-block;" for="constant"><p>=</p></label>
+    <input class = "inputold" type="text" name="constant">
+    
+
+
+    {% comment %} newcodefromhere {% endcomment %}
+
+    <br><br>
+
+    <label for="particularcheckbox">Do you want to find particular solution as well?</label>
+    <input type="checkbox" class="inputold" name="particularcheckbox">
+    
+    <br><br>
+    
+    {% for z in semicolon_list  %}
+    
+
+    <label for="particularx{{z}}" class="labelold">$$y{{z}}($$</label>
+    <input type="number" class="inputold" name="particularx{{z}}" >
+    <label for="particulary{{z}}" class="labelold">$$)=$$</label>
+    <input type="number" class="inputold" name="particulary{{z}}" >
+    <br>
+    {% endfor %}
     
     
 
