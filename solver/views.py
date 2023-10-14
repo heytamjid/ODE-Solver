@@ -113,6 +113,8 @@ def submitODE (request, num):
 
         pairs = [(0, 0) for _ in range(degree)]
         particularexist = 1;
+        initial_conditions = {}  # Initialize an empty dictionary for initial conditions
+        part_soln = None
 
         #valterminal=input("Do you want to have initial condition solution? (Y/n) : ")
         checkbox_value = request.POST.get('particularcheckbox')
@@ -126,28 +128,32 @@ def submitODE (request, num):
                 pairs[xyz]=(x_val,y_val)
             print("HERE GOES YOUR PAIRS")
             print(pairs)
+            
+            ivariable = 0
+            for x_val, y_val in pairs:
+                #initial_conditions[y(x_val)] = y_val
+                initial_conditions[y.diff(x,ivariable).subs(x, x_val)] = y_val   #corrected
+                ivariable = ivariable + 1
+                
+            print("HERE GOES YOUR DICTIONARY")
+            print(initial_conditions)
+
+            try:
+                part_soln = sympy.dsolve(eq, ics=initial_conditions)
+            except Exception as e:
+                    print("Something went wrong:" + str(e))
+                    #return HttpResponse("Soemthing went wrong: "+  str(e)) 
+                    return render(request, 'solver/error.html', {'err' :str(e) })
+
+            print("The particular solution is: ")
+            sympy.pprint(part_soln)
+            
+            
+            
         else:
             particularexist = 0      
         
-        ivariable = 0
-        initial_conditions = {}  # Initialize an empty dictionary for initial conditions
-        for x_val, y_val in pairs:
-            #initial_conditions[y(x_val)] = y_val
-            initial_conditions[y.diff(x,ivariable).subs(x, x_val)] = y_val   #corrected
-            ivariable = ivariable + 1
-            
-        print("HERE GOES YOUR DICTIONARY")
-        print(initial_conditions)
 
-        try:
-            part_soln = sympy.dsolve(eq, ics=initial_conditions)
-        except Exception as e:
-                print("Something went wrong:" + str(e))
-                #return HttpResponse("Soemthing went wrong: "+  str(e)) 
-                return render(request, 'solver/error.html', {'err' :str(e) })
-
-        print("The particular solution is: ")
-        sympy.pprint(part_soln)
 
     except Exception as e:
             print("Something went wrong:" + str(e))

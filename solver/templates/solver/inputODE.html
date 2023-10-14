@@ -15,18 +15,18 @@
     {% for first, second in combined %}
     
     <label class = "labelold" for="$${{first}}$$">  <p>+</p></label>
-    <input class = "inputold" type="text" name="{{first}}">
+    <input class = "inputold" type="text" name="{{first}}" required>
     <p>$$D^{ {{second}} }$$</p>
     {% endfor %}
 
     
     <label class = "labelold" style="display: inline-block;" for="y"><p>+</p></label>
-    <input class = "inputold" type="text" name="y">
+    <input class = "inputold" type="text" name="y" required>
     <p class = "pcss1" >$$ ) y$$</p>
     
     
     <label class = "labelold" style="display: inline-block;" for="constant"><p>=</p></label>
-    <input class = "inputold" type="text" name="constant">
+    <input class = "inputold" type="text" name="constant" required>
     
 
 
@@ -35,7 +35,7 @@
     <br><br>
 
     <label for="particularcheckbox">Do you want to find particular solution as well?</label>
-    <input type="checkbox" class="inputold" name="particularcheckbox">
+    <input type="checkbox" class="inputold" id="checkboxxx" name="particularcheckbox" checked>
     
     <br><br>
     
@@ -43,9 +43,9 @@
     
 
     <label for="particularx{{z}}" class="labelold">$$y{{z}}($$</label>
-    <input type="text" class="inputold" name="particularx{{z}}" >
+    <input type="text" class="inputold" id="textinputtt" name="particularx{{z}}" >
     <label for="particulary{{z}}" class="labelold">$$)=$$</label>
-    <input type="text" class="inputold" name="particulary{{z}}" >
+    <input type="text" class="inputold" id="textinputtt" name="particulary{{z}}" >
     <br>
     {% endfor %}
     
