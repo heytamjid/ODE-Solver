@@ -1,0 +1,416 @@
+<!doctype html>
+{%load static%}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../../../static/all.css">
+
+    <style>
+        
+/* my css starts here */
+html {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,*:before,*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    width: 100%;
+}
+
+b {
+  position: relative;
+  display: block;
+  font-family: helvetica neue, helvetica, sans-serif;
+  line-height: 1.15em;
+  margin-top: 0%;
+  top: 2.3em;
+  font-size: 0.67em;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  opacity: 0.75;
+  text-align: center;
+}
+
+b span {
+  font-size: 0.785em;
+  font-weight: 400;
+  opacity: 0.4;
+}
+
+#intro {
+  width: 200px;
+  margin: 100px auto 0;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    margin-top: 10px;
+    /* align-self: center; */
+    margin-left: 30%;
+}
+
+.button .bottom {
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    width: 100%;
+    height: 100%;
+    background-color: #69f0ae;
+    display: block;
+    -webkit-transition: all .15s ease-out;
+    -moz-transition: all .15s ease-out;
+    -o-transition: all .15s ease-out;
+    transition: all .15s ease-out;
+}
+
+.button .top {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 24px 34px 25px 39px;
+    border: 2px solid #f5f5f5;
+}
+
+.button-dark .top {
+    border: 2px solid #fff;
+}
+
+.button .top .label {
+    font-family: sans-serif;
+    font-weight: 600;
+    color: #0a0a0a;
+    font-size: 12px;
+    line-height: 110%;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-transition: all .15s ease-out;
+    -moz-transition: all .15s ease-out;
+    -o-transition: all .15s ease-out;
+    transition: all .15s ease-out;
+}
+
+.button-dark .top .label {
+    color: #fff;
+}
+
+.button:hover .bottom {
+    left: 0;
+    top: 0;
+    background-color: #000000;
+}
+
+.button:hover .top .label {
+    color: #69f0ae;
+}
+
+.button-border {
+    position: absolute;
+    background-color: #69f0ae;
+    -webkit-transition: all .25s ease-out;
+    -moz-transition: all .25s ease-out;
+    -o-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+}
+
+.button:hover .top .button-border-left,.button:hover .top .button-border-right {
+    height: calc(100% + 2px);
+}
+
+.button:hover .top .button-border-top,.button:hover .top .button-border-bottom {
+    width: calc(100% + 2px);
+}
+
+.button-border-left {
+    left: -2px;
+    bottom: -2px;
+    width: 2px;
+    height: 0;
+}
+
+.button-border-top {
+    left: -2px;
+    top: -2px;
+    width: 0;
+    height: 2px;
+}
+
+.button-border-right {
+    right: -2px;
+    top: -2px;
+    width: 2px;
+    height: 0;
+}
+
+.button-border-bottom {
+    right: -2px;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+}
+
+
+
+/* css ends here */
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background: #080808;
+    /* color: #fff; */
+}
+#header{
+    width :100%;
+    height: 55vh;
+    /* have to add an image */
+    background-image: url(); 
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display: flex ;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 140px;
+}
+nav ul li{
+    align-content: end;
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    font-weight: 600; 
+}    
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content:'';
+    width: 0;
+    height: 1px;
+    background: #69f0ae;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 25%;
+    font-size: 18px;
+    align-content: center;
+    margin-left: 25%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.header-text p{
+    letter-spacing: 0.7em;
+    margin-left: 23%;
+    color: #fff;
+}
+.header-text h1{
+    margin-top: 20px;
+    font-size: 60px;
+    margin-left: 15%;
+}
+.header-text h1 span{
+    color: #69f0ae;
+    font-size: 60px;
+}
+/* ------------------------------------------------------------------------------------------------------ */
+#documentation{
+    margin-top: 100px;
+    padding: 80px 0px;
+    margin-bottom: 50px;
+    color: #ababab;
+}
+.k{
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 20px;
+    font-weight: 400;
+}
+.k h1{
+    margin-left: 30%;
+    margin-bottom: 20px;
+    font-size: 60px;
+    font-weight: 700;
+    color: #69f0ae;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.k p{
+    margin-bottom: 20px;
+}
+.k p2{
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+.k h3 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 30%;
+    font-size: 20px;
+}
+/* ------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+    </style>
+
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+
+    <!-- <style>
+      label {
+          display: inline-block;
+          width: 50px; /* Adjust the width as needed */
+          text-align: center; /* Center-align the content inside the label */
+      }
+  
+      input {
+          display: inline-block;
+          width: 100px; /* Adjust the width as needed */
+      }
+  
+     p {
+          display: inline-block;
+          margin: 0; /* Remove any default margin */
+      }
+  </style> -->
+
+    <title>ODE Solver</title>
+    <link rel="stylesheet" type="text/css" href="base1.css"/>
+  </head>
+  <body>
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+    <div id="header" class="container">
+      <nav>
+        <!-------- have to add an image ----------->
+        <img src="" class="logo" />
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#documentation">Documentation</a></li>
+          <!-- <i class="fa-solid fa-xmark" onclick="closemenu()"></i> -->
+        </ul>
+        <!-- <i class="fa-solid fa-ellipsis-vertical" onclick="openmenu()"></i> -->
+      </nav>
+      <div class="header-text">
+        <p>Welcome  to</p>
+        <h1> <span>ODE </span>Solver</h1>
+      </div>
+    </div>
+
+    <!-- my code starts-->
+
+    <section id="intro">
+
+    <div id="intro-content" class="center-content">
+
+        <div class="center-content-inner">
+
+        <div class="content-section content-section-margin">
+
+            <div class="content-section-grid clearfix">
+            
+            <a href="{% url 'home' %}" class="button nav-link">
+
+            <div class="bottom"></div>
+
+            <div class="top">
+
+            <div class="label">Let's Solve!</div>
+      
+            
+                
+                    <div class="button-border button-border-left"></div>
+                <div class="button-border button-border-top"></div>
+                <div class="button-border button-border-right"></div>
+                    <div class="button-border button-border-bottom"></div>
+
+            </div>
+
+                </a>
+
+            </div>
+
+        </div>
+
+        </div>
+
+        </div>
+
+    </section>
+
+
+     <!-- my code ends-->
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+      <div id="documentation">
+        <div class="k">
+            <h1>User's Directory</h1>
+            <p>🟢This webapp can solve non-homogeneous differential equations up to 20th order. It can also find particular solutions while initial values are provided.</p>
+              <p1>🟢A non-homogeneous system of equations is a system in which the vector of constants on the right-hand side of the equals sign is non-zero.
+              This webapp is able to solve the non-homogeneous equations with constant co-efficients as well as variable co-effecients. But the equation 
+              must be in following form:</p1>
+              <h3>(f(x)D<sup>n</sup> + f(x)D<sup>n-1</sup> + ........... + f(x)D + C) y = Q </h3>
+              🟢For the proper functioning of the web-app, you need to input the ODE in the right format. Otherwise, the code will not run properly. Please follow the manual for right format of input:<br>
+              🔸Mathematical Expression ➡️ Input Format  <br>
+              🔸x<sup>n</sup> ➡️ x^n<br>
+              🔸3x ➡️ 3*x<br>
+              🔸e<sup>x</sup>➡️exp(x)<br>
+              🔸sinx ➡️ sin(x)  (same for other trigonometric functions)<br>
+              🔸√x ➡️ sqrt(x)<br>
+              🔸∛x ➡️ x^(1/3)<br>
+              🔸logx ➡️ log(x)  (same for lnx)<br>
+              🔸3(x+2sinx) ➡️ 3*(x+2*sin(x))<br>
+            </p>
+        </div>
+    </div>
+<!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+  </body>
+  </html>

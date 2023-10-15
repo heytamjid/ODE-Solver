@@ -9,8 +9,8 @@
 <form method="post" action="{% url 'submitODE' n %}">
     {% csrf_token %}
     
-    
-    
+    <h3>  Enter the coefficients of your ODE: </h3>
+    <br>
     <p>$$($$</p>
     {% for first, second in combined %}
     
@@ -34,8 +34,9 @@
 
     <br><br>
 
-    <label for="particularcheckbox">Do you want to find particular solution as well?</label>
-    <input type="checkbox" class="inputold" id="checkboxxx" name="particularcheckbox">
+    <h4>Do you want to find particular solution as well? <span>    <input type="checkbox" class="large-checkbox" id="checkboxxx" name="particularcheckbox">
+    </span></h4>
+    <!-- <label for="particularcheckbox">Do you want to find particular solution as well?</label> -->
     
     <br><br>
     
@@ -56,7 +57,7 @@
 
     
     </br>
-    <input type="submit" value="Submit">
+    <input class="submitbtnn" type="submit" value="Submit">
 </form>
 
 

@@ -11,6 +11,9 @@ import sympy
 def home (request):
     return render (request, 'solver/home.html')
 
+def frontpage (request):
+    return render (request, 'solver/frontpage.html' )
+
 
 def inputODE (request):
     try:

@@ -4,23 +4,26 @@
 
 
 {% block body %}
-
-<h5>Your Input ODE: </h5>
+<br>
+<h4 class="comeheremiddle">Your Input ODE: </h5>
 <div id="equation">
     $${{ input | safe }}$$
 </div>
 <br><br>
 
-<h5>General Solution: </h5>
+<h4 class="comeheremiddle">General Solution: </h5>
 <div id="equation">
     $${{ gsoln | safe }}$$
 </div>
 <br><br>
 
 {% if particularexist == 1 %}
-<h5>$$Particular Solution for {{initial_conditions}}:$$ </h5><br>
+<h4 class ="comeheremiddlee">Particular Solution for </h4>
+<h6>$${{initial_conditions}}:$$</h6>
+<br>
 <div id="equation">
     $${{ psoln | safe }}$$
+    <br><br><br><br>
 </div>
 {% endif %}
 
