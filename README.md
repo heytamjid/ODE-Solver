@@ -1,7 +1,7 @@
 
 # ODE Solver
 
-[![License](https://tamjidfahim02.pythonanywhere.com/#documentation)](LICENSE)
+[https://tamjidfahim02.pythonanywhere.com/#documentation]
 
 ## Description
 
