@@ -9,24 +9,46 @@
 <form method="post" action="{% url 'submitODE' n %}">
     {% csrf_token %}
     
-    
-    
+    <h3>  Enter the coefficients of your ODE: </h3>
+    <br>
     <p>$$($$</p>
-    {% for i in order_list %}
+    {% for first, second in combined %}
     
-    <label id = "labelcss1" for="$${{i}}$$">  <p>+</p></label>
-    <input id = "inputcss1" type="text" name="{{i}}">
-    <p>$$D^{{i}}$$</p>
+    <label class = "labelold" for="$${{first}}$$">  <p>+</p></label>
+    <input class = "inputold" type="text" name="{{first}}" required>
+    <p>$$D^{ {{second}} }$$</p>
     {% endfor %}
 
     
-    <label id = "labelcss1" style="display: inline-block;" for="y"><p>+</p></label>
-    <input id = "inputcss1" type="text" name="y">
-    <p id = "pcss1" >$$ ) y$$</p>
+    <label class = "labelold" style="display: inline-block;" for="y"><p>+</p></label>
+    <input class = "inputold" type="text" name="y" required>
+    <p class = "pcss1" >$$ ) y$$</p>
     
     
-    <label id = "labelcss1" style="display: inline-block;" for="constant"><p>=</p></label>
-    <input id = "inputcss1" type="text" name="constant">
+    <label class = "labelold" style="display: inline-block;" for="constant"><p>=</p></label>
+    <input class = "inputold" type="text" name="constant" required>
+    
+
+
+    {% comment %} newcodefromhere {% endcomment %}
+
+    <br><br>
+
+    <h4>Do you want to find particular solution as well? <span>    <input type="checkbox" class="large-checkbox" id="checkboxxx" name="particularcheckbox">
+    </span></h4>
+    <!-- <label for="particularcheckbox">Do you want to find particular solution as well?</label> -->
+    
+    <br>
+    
+    {% for z in semicolon_list  %}
+    
+
+    <label for="particularx{{z}}" class="labelold">$$y{{z}}($$</label>
+    <input type="text" class="inputold" id="textinputtt" name="particularx{{z}}" >
+    <label for="particulary{{z}}" class="labelold">$$)=$$</label>
+    <input type="text" class="inputold" id="textinputtt" name="particulary{{z}}" >
+    <br>
+    {% endfor %}
     
     
 
@@ -34,8 +56,10 @@
 
 
     
-    </br>
-    <input type="submit" value="Submit">
+    </br><br>
+    <input style="margin-left: 1%" class="submitbtnn" type="submit" value="Submit">
+    <br><br><br>
+    <h6 style="margin-left: 1%;" >The solving process of ODE may take some time. Please do not repeatedly press the <i>Submit</i> button while it's loading. Your patience is appreciated.</h6>
 </form>
 
 

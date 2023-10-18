@@ -1,0 +1,41 @@
+.h3here{
+    margin-top: 15%;
+    font-size: 40px;
+    color: #000;
+    margin-left: 20%;
+    margin-bottom: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.inputclass{
+    margin-left: 40%;
+    /* margin-top: 10px; */
+    margin-bottom: 0px;
+    padding: 10px 50px;
+}
+
+.submitbtn{
+    padding: 10px 40px;
+    border-radius: 6px;
+    border: 1.5px solid #000;
+    margin-left: 47%;
+    margin-top: -200px;
+}
+
+
+/* old */
+.labelold {
+    display: inline-block;
+    width: 100px; /* Adjust the width as needed */
+    text-align: center; /* Center-align the content inside the label */
+}
+
+.inputold {
+    display: inline-block;
+    width: 1000px; /* Adjust the width as needed */
+}
+
+p {
+    display: inline-block;
+    margin: 0; /* Remove any default margin */
+}

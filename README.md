@@ -1,8 +1,7 @@
-This branch is outdated. Please check out the branch with latest update: https://github.com/heytamjid/ODE-Solver/tree/particularera
-
-# ODE Solver
+## ODE Solver
 
 [https://tamjidfahim02.pythonanywhere.com/#documentation]
+
 
 ## Description
 

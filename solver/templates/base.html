@@ -1,5 +1,5 @@
 <!doctype html>
-{%load static%}
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -9,21 +9,72 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          // Get references to the checkbox and the text input field.
+          var checkbox = document.getElementById("checkboxxx");
+          var textInput = document.getElementById("textinputtt");
+      
+          // Add an event listener to the checkbox to toggle the "required" attribute on the text input.
+          checkbox.addEventListener("change", function () {
+              if (checkbox.checked) {
+                  textInput.setAttribute("required", "required");
+              } else {
+                  textInput.removeAttribute("required");
+              }
+          });
+      });
+      </script>
+    <link rel = "stylesheet" href="/static/orderselection.css"/>
     <style>
-      label {
-          display: inline-block;
-          width: 50px; /* Adjust the width as needed */
-          text-align: center; /* Center-align the content inside the label */
-      }
-  
-      input {
+      .labelold {
           display: inline-block;
           width: 100px; /* Adjust the width as needed */
+          text-align: center; /* Center-align the content inside the label */
+          margin: -2%;
+      }
+  
+      .inputold {
+          display: inline-block;
+          width: 100px; /* Adjust the width as needed */
+          margin-bottom: 10px;
       }
   
      p {
           display: inline-block;
           margin: 0; /* Remove any default margin */
+      }
+
+      .submitbtnn{
+    padding: 10px 25px;
+    border-radius: 6px;
+    border: 1.5px solid #000;
+    margin-left: 2%;
+    margin-top: -200px;
+      }
+
+      .large-checkbox 
+      {
+        transform : scale(1.5);
+        margin-left: 10px;
+      }
+
+      
+      h4, h3, p
+      {
+        margin-left: 12px;
+      }
+
+      .comeheremiddle 
+      {
+        margin-left: 0%;
+        text-align: center;
+      }
+
+      .comeheremiddlee 
+      {
+        margin-left: 0%;
+        text-align: center;
       }
   </style>
 
@@ -33,13 +84,13 @@
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="{% url 'home' %}">ODE Solver</a>
+          <a class="navbar-brand" href="{% url 'frontpage' %}">ODE Solver</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
               </li>
               <li class="nav-item">
@@ -50,7 +101,7 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{% url 'about' %}">About</a>
-              </li>
+              </li> -->
               {% comment %} <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dropdown

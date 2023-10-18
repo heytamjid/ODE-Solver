@@ -3,21 +3,23 @@
 
 {% block body %}
 
-<h3>Select the order of ODE you want to solve (1-6):</h3>
+<h3 class = "h3here">Select the order of the ODE you want to solve:</h3>
     <form action="{% url 'inputODE' %}" method="post">
         {% csrf_token %} 
-        {% comment %} <label for="selectNumber">Select the order of ODE you want to solve (1-6):</label> {% endcomment %}
-        <select id="selectNumber" name="selectNumber" required>
+        {% comment %} <label for="selectNumber">Select the order of ODE you want to solve (1-20):</label> {% endcomment %}
+        <!-- <select id="selectNumber" name="selectNumber" required>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
             <option value="6">6</option>
-        </select>
+        </select> -->
+        <label for="number"></label>
+        <input class = "inputclass" type="number" id="number" name="number" required><br><br>
         <br>
         <br>
-        <input type="submit" value="Submit">
+        <input class="submitbtn" type="submit" value="Proceed">
     </form>
 
 
