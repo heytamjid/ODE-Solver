@@ -2,8 +2,14 @@
 
 {% block body %}
 
-<h1>Something Went Wrong...</h1>
+<h3>Something Went Wrong...</h3>
     <p>{{err}}<p>
 
+<h3>What You Can Do?</h3>
+<ul>
+    <li>Ensure that the input format is correct as mentioned in <i><a href="{% url 'frontpage' %}">Documentation.</a></i></li>
+    <li>Ensure your input ODE is solvable.</li>
+    <li>Make sure that you've provided required data (i.e. initial values when the checkbox for finding particular soluton is ticked) to solve the ODE.</li>
+    <li>Reach us at tamjidhf@gmail.com or kefaet.cp@gmail.com without any hesitation and help us to make this webapp better.</li>
 
 {% endblock %}
